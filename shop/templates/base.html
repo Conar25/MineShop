@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <header>
+        <div class="container container-between">
+            <a href="{% url 'shop:list' %}">
+                <img src="{% static 'img/logo.png' %}" alt="" class="img-header">
+            </a>
+
+            <a href="#" class="cart">
+                <p>4 items, <span class="price">435.65$</span></p>
+                <img src="{% static 'img/cart.png' %}" alt="" class="img-header">
+            </a>
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock content %}
+    
+    <footer>
+        <p>Mady by Ilshat G.</p>
+    </footer>
+
+    {% block scripts %}
+    {% endblock scripts %}
+</body>
+</html>

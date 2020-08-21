@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+MineShop
+{% endblock title %}
+
+{% block content %}
+    <div class="container container-content">
+
+        <h1 class="content-title">Welcome to MineShop</h1>
+
+        <div class="content-body">
+        
+            <div class="categories">
+                <ul>
+                    <li><a href="{% url 'shop:list' %}" {% if not active_category %}class="active-category"{% endif %}>All</a></li>
+                    {% for category in categories %}
+                        <li><a href="{{ category.get_absolute_url }}" {% if active_category == category.name %}class="active-category"{% endif %}>{{ category.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <main class="products">
+                <ul>
+                    {% include "shop/products_ajax.html" with products=products %}
+                </ul>
+            </main>
+
+            <aside class="sidebar">
+                <h2 class="sidebar-title">Popular</h2>
+                <div class="sidebar-body">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="sidebar-item">
+                                    <h3 class="sidebar-item-title">Dirt</h3>
+                                    <img src="img/dirt.png" alt="" class="sidebar-item-image">
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <div class="sidebar-item">
+                                    <h3 class="sidebar-item-title">Dirt</h3>
+                                    <img src="img/dirt.png" alt="" class="sidebar-item-image">
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </aside>
+            
+        </div>
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'js/list.js' %}"></script>
+{% endblock scripts %}

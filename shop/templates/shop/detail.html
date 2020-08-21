@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load get_image %}
+
+{% block title %}
+Product detail
+{% endblock title %}
+
+{% block content %}
+    <div class="container container-content container-detail">
+        <div class="product-logo">
+            <h3 class="product-logo-title">{{ product.name }}</h3>
+            <img src="{% get_image product.image %}" alt="" class="product-logo-image">
+        </div>
+
+        <div class="product-description">
+            <p class="info">
+                {{ product.description }}
+            </p>
+
+            <form action="#">
+                <input type="number" value="1">
+                <button class="btn">add to the cart</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

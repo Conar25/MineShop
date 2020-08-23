@@ -109,6 +109,10 @@ Layout
     font-weight: 400;
 }
 
+.language-select {
+    margin: 0 0.6em;
+}
+
 /* footer */
 footer {
     text-align: center;

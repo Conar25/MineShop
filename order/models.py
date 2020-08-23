@@ -1,15 +1,16 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 from shop.models import Product
 
 
 class Order(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    email = models.EmailField()
-    city = models.CharField(max_length=200)
-    address = models.CharField(max_length=200)
-    postal_code = models.CharField(max_length=20)
+    first_name = models.CharField(verbose_name=_('First Name'),max_length=100)
+    last_name = models.CharField(verbose_name=_('Last Name'), max_length=100)
+    email = models.EmailField(verbose_name=_('Email'))
+    city = models.CharField(verbose_name=_('City'), max_length=200)
+    address = models.CharField(verbose_name=_('Address') ,max_length=200)
+    postal_code = models.CharField(verbose_name=_('Postal Code'), max_length=20)
     paid = models.BooleanField(default=False)
     payment_time = models.DateTimeField(blank=True,
                                         null=True)

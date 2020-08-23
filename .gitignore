@@ -6,3 +6,4 @@ prototype/
 */migrations/
 db.sqlite3
 static/
+*/locale/

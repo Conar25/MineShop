@@ -1,27 +1,31 @@
 {% extends 'base.html' %}
+{% load i18n %}
+{% load l10n %}
 
-{% block title %}Payment{% endblock title %}
+{% block title %}{% trans "Payment" %}{% endblock title %}
 
 {% block content %}
     <div class="container container-content">
         {% if not order.paid %}
-            <h1 class="content-title">Payment</h1>
+            <h1 class="content-title">{% trans "Payment" %}</h1>
             <div id="paypal-button-container"></div>
         {% else %}
             <h1 class="content-title">
-                This order has already been paid.
+                {% trans "This order has already been paid" %}.
             </h1>
         {% endif %}
     </div>
 {% endblock content %}
 
 {% block scripts %}
+    {% localize off %}
      <!-- Include the PayPal JavaScript SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=AbtCWfMO7w78HBFoHmQqnJwlu38ZdYD3Ahlg9UYQtALDvAPVCfZx99LpogkIi9F-AMHC_qQES20bME2g&currency=RUB"></script>
 
     <script>
         const order_price = '{{ order.get_total_price }}';
         const url = "{% url 'order:complete' order.pk %}";
+        console.log(order_price, url)
         // Render the PayPal button into #paypal-button-container
         paypal.Buttons({
             // Set buttons style
@@ -48,9 +52,15 @@
                     //})
                     window.location.href = url
                 });
+            },
+
+            // Handle errors
+            onError: function (err) {
+                console.log(err);
             }
 
 
         }).render('#paypal-button-container');
     </script>
+    {% endlocalize %}
 {% endblock scripts %}

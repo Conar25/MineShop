@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
 {% load get_image %}
+{% load i18n %}
 
-
-{% block title %}Cart{% endblock title %}
+{% block title %}{% translate "Cart" %}{% endblock title %}
 
 
 {% block content %}
     <div class="container container-content">
-        <h2 class="content-title">Your shopping cart</h2>
+        <h2 class="content-title">{% translate "Your shopping cart" %}</h2>
 
         <table>
             <thead>
                 <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Remove</th>
-                    <th>Unit price</th>
-                    <th>Price</th>
+                    <th>{% translate "Product" %}</th>
+                    <th>{% translate "Quantity" %}</th>
+                    <th>{% translate "Remove" %}</th>
+                    <th>{% translate "Unit price" %}</th>
+                    <th>{% translate "Price" %}</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,32 +34,32 @@
                             <form action="{% url 'cart:add' item.product.pk %}" method="post">
                                 {% csrf_token %}
                                 <input type="number" value="{{ item.quantity }}" name="quantity" min="1" max="20">
-                                <button class="btn">update</button>
+                                <button class="btn">{% trans "update" %}</button>
                             </form>
                         </td>
                         <td>
                             <form action="{% url 'cart:remove' item.product.pk %}" method="post">
                                 {% csrf_token %}
-                                <button class="btn">remove</button>
+                                <button class="btn">{% translate "remove" %}</button>
                             </form>
                         </td>
                         <td>
-                            <span class="price">{{ item.price }}$</span>
+                            <span class="price">{{ item.price }} {% trans "rub" %}</span>
                         </td>
                         <td>
-                            <span class="price">{{ item.total_price }}$</span>
+                            <span class="price">{{ item.total_price }} {% trans "rub" %}</span>
                         </td>
                     </tr>
                 {% endfor %}
                 <tr>
-                    <td colspan="4" class="table-total">Total:</td>
-                    <td><span class="price">{{ cart.get_total_price }}$</span></td>
+                    <td colspan="4" class="table-total">{% trans "Total" %}:</td>
+                    <td><span class="price">{{ cart.get_total_price }} {% trans "rub" %}</span></td>
                 </tr>
             </tbody>
         </table>
         <div class="container-btn">
-            <a href="{% url 'shop:list' %}" class="btn">continue shopping</a>
-            <a href="{% url 'order:create' %}" class="btn">checkout</a>
+            <a href="{% url 'shop:list' %}" class="btn">{% trans "continue shopping" %}</a>
+            <a href="{% url 'order:create' %}" class="btn">{% trans "checkout" %}</a>
         </div>
     </div>
 {% endblock content %}

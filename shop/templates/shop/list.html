@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% block title %}
 MineShop
@@ -9,13 +9,13 @@ MineShop
 {% block content %}
     <div class="container container-content">
 
-        <h1 class="content-title">Welcome to MineShop</h1>
+        <h1 class="content-title">{% translate "Welcome to MineShop" %}</h1>
 
         <div class="content-body">
         
             <div class="categories">
                 <ul>
-                    <li><a href="{% url 'shop:list' %}" {% if not active_category %}class="active-category"{% endif %}>All</a></li>
+                    <li><a href="{% url 'shop:list' %}" {% if not active_category %}class="active-category"{% endif %}>{% translate "All" %}</a></li>
                     {% for category in categories %}
                         <li><a href="{{ category.get_absolute_url }}" {% if active_category == category.name %}class="active-category"{% endif %}>{{ category.name }}</a></li>
                     {% endfor %}
@@ -29,7 +29,7 @@ MineShop
             </main>
 
             <aside class="sidebar">
-                <h2 class="sidebar-title">Popular</h2>
+                <h2 class="sidebar-title">{% translate "Popular" %}</h2>
                 <div class="sidebar-body">
                     <ul>
                         <li>

@@ -1,31 +1,32 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Order{% endblock title %}
+{% block title %}{% trans "Order" %}{% endblock title %}
 
 {% block content %}
     <div class="container container-content container-checkout">
         <div class="checkout">
-            <h2 class="checkout-title">Checkout</h2>
+            <h2 class="checkout-title">{% trans "Checkout" %}</h2>
 
             <form method="post" class="form-checkout">
                 {% csrf_token %}
                 {{ order_form.as_p }}
                 <br><br>
                 <div class="btn-center">
-                    <button type="submit" class="btn">submit</a>
+                    <button type="submit" class="btn">{% translate "submit" %}</a>
                 </div>
             </form>
         </div>
 
         <div class="order">
-            <h3>Your order</h3>
+            <h3>{% trans "Your order" %}</h3>
             <ul class="order-list">
                 {% for item in cart %}
-                <li>{{ item.quantity }}x {{ item.product.name }} <span class="price order-price">{{ item.total_price }}$</span></li>
+                <li>{{ item.quantity }}x {{ item.product.name }} <span class="price order-price">{{ item.total_price }} {% trans "rub" %}</span></li>
                 {% endfor %}
             </ul>
 
-            <p class="order-total">Total: <span class="price">{{ cart.get_total_price }}$</span></p>
+            <p class="order-total">{% trans "Total" %}: <span class="price">{{ cart.get_total_price }} {% trans "rub" %}</span></p>
         </div>
     </div>
 {% endblock content %}

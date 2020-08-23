@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+{% load language_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,16 +17,27 @@
                 <img src="{% static 'img/logo.png' %}" alt="" class="img-header">
             </a>
 
+            <span class="cart">
             <a href="{% url 'cart:cart' %}" class="cart">
                 {% with cart|length as total_items %}
                     {% if total_items %}
-                        <p>{{total_items}} item{{ total_items|pluralize }}, <span class="price">{{ cart.get_total_price }}$</span></p>
+                        <p>
+                        {% blocktranslate with total_price=cart.get_total_price count total_items=total_items %}
+                        {{total_items}} item, <span class="price">{{ total_price }} rub</span>
+                        {% plural %}
+                        {{total_items}} items, <span class="price">{{ total_price }} rub</span>
+                        {% endblocktranslate %}
+                        </p>
                     {% else %}
-                        <p>Empty</p>
+                        <p>{% translate "Empty" %}</p>
                     {% endif %}
                 {% endwith %}
                 <img src="{% static 'img/cart.png' %}" alt="" class="img-header">
             </a>
+
+            {% get_current_language as LANGUAGE_CODE %}
+            <span class="language-select"><a href="{{ request.path|language_url:"ru" }}" {% if LANGUAGE_CODE == 'ru' %}class="active-category"{% endif %}>ru</a> / <a href="{{ request.path|language_url:"en" }}" {% if LANGUAGE_CODE == 'en' %}class="active-category"{% endif %}>en</a></span>
+            </span>
         </div>
     </header>
 
@@ -32,7 +45,7 @@
     {% endblock content %}
     
     <footer>
-        <p>Mady by Ilshat G.</p>
+        <p>{% translate "Mady by Ilshat G." %}</p>
     </footer>
 
     {% block scripts %}

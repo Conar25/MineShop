@@ -1,5 +1,6 @@
 {% load get_image %}
 {% load brief %}
+{% load i18n %}
 
 {% for product in products %}
     <li>
@@ -13,12 +14,12 @@
                 <h3 class="product-title">{{ product.name }}</h3>
                 <p class="product-brief">{{ product|brief }}</p>
                 <div class="product-special">
-                    <span class="product-price">{{ product.price }}$</span>
+                    <span class="product-price">{{ product.price }} {% trans "rub" %}</span>
                     <form action="{% url 'cart:add' product.pk %}" method="post">
                         {% csrf_token %}
                         <input type="hidden" value="1" name="quantity">
                         <input type="hidden" value="False" name="override">
-                        <button type="submit" class="btn">add</button>
+                        <button type="submit" class="btn">{% translate "add" %}</button>
                     </form>
                 </div>
             </div>

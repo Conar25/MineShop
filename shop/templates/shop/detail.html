@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load get_image %}
+{% load i18n %}
 
 {% block title %}
-Product detail
+{% translate "Product detail" %}
 {% endblock title %}
 
 {% block content %}
@@ -17,13 +18,13 @@ Product detail
                 {{ product.description }}
             </p>
             <p>
-                Price: <span class="price">{{ product.price }}$</span>
+                {% translate "Price" %}: <span class="price">{{ product.price }} {% translate "rub" %}</span>
             </p>
             <form action="{% url 'cart:add' product.pk %}" method="post">
                 {% csrf_token %}
                 <input type="number" value="1" name='quantity' min=1 max=20>
                 <input type="hidden" value="False" name="override">
-                <button type="submit" class="btn">add to the cart</button>
+                <button type="submit" class="btn">{% translate "add to the cart" %}</button>
             </form>
         </div>
     </div>

@@ -15,8 +15,14 @@
                 <img src="{% static 'img/logo.png' %}" alt="" class="img-header">
             </a>
 
-            <a href="#" class="cart">
-                <p>4 items, <span class="price">435.65$</span></p>
+            <a href="{% url 'cart:cart' %}" class="cart">
+                {% with cart|length as total_items %}
+                    {% if total_items %}
+                        <p>{{total_items}} item{{ total_items|pluralize }}, <span class="price">{{ cart.get_total_price }}$</span></p>
+                    {% else %}
+                        <p>Empty</p>
+                    {% endif %}
+                {% endwith %}
                 <img src="{% static 'img/cart.png' %}" alt="" class="img-header">
             </a>
         </div>

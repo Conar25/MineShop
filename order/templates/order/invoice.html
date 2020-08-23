@@ -1,0 +1,50 @@
+<html>
+<body>
+    <div class="container">
+        <h1>MineShop</h1>
+
+        <div class="invoice">
+            <p class="invoice-number">Invoice #{{ order.pk }}</p>
+            <p class="invoice-date">{{ order.payment_time }}</p>
+        </div>
+
+        <h2>Bill to</h2>
+
+        <div class="order-info">
+            <p class="name">{{ order.first_name }}</p>   
+            <p class="email">{{ order.email }}</p>
+            <p class="address">{{ order.address }}</p>
+            <p><span class="postal">{{ order.postal_code }}</span>, <span class="city">{{ order.city }}</span></p>
+        </div>
+
+        <h2>Items bought</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in order.order_items.all %}
+                    <tr>
+                        <td>{{ product.product.name }}</td>
+                        <td>{{ product.price }} rub</td>
+                        <td>{{ product.quantity }}</td>
+                        <td>{{ product.get_cost }} rub</td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="3">Total</td>
+                    <td>{{ order.get_total_price }} rub</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <span class="paid">Paid</span>
+    </div>
+</body>
+</html>

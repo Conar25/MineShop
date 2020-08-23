@@ -14,7 +14,12 @@
                 <p class="product-brief">{{ product|brief }}</p>
                 <div class="product-special">
                     <span class="product-price">{{ product.price }}$</span>
-                    <a href="#" class="btn">add</a>
+                    <form action="{% url 'cart:add' product.pk %}" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" value="1" name="quantity">
+                        <input type="hidden" value="False" name="override">
+                        <button type="submit" class="btn">add</button>
+                    </form>
                 </div>
             </div>
         </div>

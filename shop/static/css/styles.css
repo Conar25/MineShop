@@ -406,3 +406,8 @@ form input {
         order: 2;
     }
 }
+
+/* payment */
+#paypal-button-container {
+    text-align: center;
+}

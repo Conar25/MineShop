@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load i18n %}
+{% load get_image %}
 
 {% block title %}
 MineShop
@@ -27,32 +28,26 @@ MineShop
                     {% include "shop/products_ajax.html" with products=products %}
                 </ul>
             </main>
-
-            <aside class="sidebar">
-                <h2 class="sidebar-title">{% translate "Popular" %}</h2>
-                <div class="sidebar-body">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <div class="sidebar-item">
-                                    <h3 class="sidebar-item-title">Dirt</h3>
-                                    <img src="img/dirt.png" alt="" class="sidebar-item-image">
-                                </div>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <div class="sidebar-item">
-                                    <h3 class="sidebar-item-title">Dirt</h3>
-                                    <img src="img/dirt.png" alt="" class="sidebar-item-image">
-                                </div>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-            </aside>
+            
+            {% if popular_products %}
+                <aside class="sidebar">
+                    <h2 class="sidebar-title">{% translate "Popular" %}</h2>
+                    <div class="sidebar-body">
+                        <ul>
+                            {% for product in popular_products %}
+                                <li>
+                                    <a href="{{ product.get_absolute_url }}">
+                                        <div class="sidebar-item">
+                                            <h3 class="sidebar-item-title">{{ product.name }}</h3>
+                                            <img src="{% get_image product.image %}" alt="" class="sidebar-item-image">
+                                        </div>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </aside>
+            {% endif %}
             
         </div>
     </div>

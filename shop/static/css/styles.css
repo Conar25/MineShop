@@ -301,7 +301,28 @@ td input[type="number"] {
     text-align:right;
 }
 
+.recommendations {
+    margin: 2em 0;
+}
+
+.recommendations-body ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+@media (min-width: 500px) {
+    .recommendations-body ul {
+        flex-direction: row;
+    }
+}
+
 /* detail page */
+.detail {
+    margin: 0 auto;
+}
+
 .container-detail {
     margin: 2em auto;
 }
@@ -317,7 +338,7 @@ td input[type="number"] {
 
 
 @media (min-width: 500px) {
-    .container-detail {
+    .detail {
         display: flex;
         justify-content: space-between;
     }
@@ -328,6 +349,17 @@ td input[type="number"] {
 
     .product-description {
         width: 65%;
+    }
+}
+
+@media (min-width: 1024px){
+    .detail {
+        width: 80%;
+    }
+
+    .container-detail{
+        display: flex;
+        align-items: flex-start;
     }
 }
 

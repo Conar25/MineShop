@@ -1,3 +1,5 @@
+import redis
+
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.http import HttpResponse
 from django.template.loader import render_to_string
@@ -6,11 +8,17 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.utils import timezone
 
 from cart.cart import Cart
+from shop.recommender import Recommender
 
 from .forms import OrderForm
 from .models import OrderItem, Order
 from .tasks import send_order_created_email, send_order_paid_email
 from .utils import write_invoice_pdf
+
+
+r = redis.Redis(host=settings.REDIS_HOST,
+                port=settings.REDIS_PORT,
+                db=settings.REDIS_DB)
 
 
 def payment_view(request, pk):
@@ -34,12 +42,17 @@ def order_view(request):
             cart = Cart(request)
             order = order_form.save()
             for item in cart:
+                # Create new order item
                 OrderItem.objects.create(
                     order=order,
                     product=item['product'],
                     price=item['price'],
                     quantity=item['quantity']
                 )
+                # Update ranking for products
+                r.zincrby('product_ranking', item['quantity'], item['product'].pk)
+            rec = Recommender()
+            rec.products_bought(order)
             cart.clear()
             payment_url = request.build_absolute_uri(reverse('order:payment', args=[order.pk,]))
             send_order_created_email.delay(order.pk, order.email, payment_url)

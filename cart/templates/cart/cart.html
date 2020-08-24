@@ -61,5 +61,25 @@
             <a href="{% url 'shop:list' %}" class="btn">{% trans "continue shopping" %}</a>
             <a href="{% url 'order:create' %}" class="btn">{% trans "checkout" %}</a>
         </div>
+
+        {% if recommended_products %}
+            <div class="recommendations"></div>
+                <h2 class="sidebar-title">{% translate "You can be interested in" %}</h2>
+                <div class="recommendations-body">
+                    <ul>
+                        {% for product in recommended_products %}
+                            <li>
+                                <a href="{{ product.get_absolute_url }}">
+                                    <div class="sidebar-item">
+                                        <h3 class="sidebar-item-title">{{ product.name }}</h3>
+                                        <img src="{% get_image product.image %}" alt="" class="sidebar-item-image">
+                                    </div>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
     </div>
 {% endblock content %}

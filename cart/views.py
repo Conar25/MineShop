@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http import require_POST
 
 from shop.models import Product
+from shop.recommender import Recommender
 
 from .cart import Cart
 
@@ -28,4 +29,11 @@ def remove_view(request, pk):
 
 def cart_view(request):
     cart = Cart(request)
-    return render(request, 'cart/cart.html', {})
+    products = [item['product'] for item in cart]
+    if products:
+        r = Recommender()
+        recommended_products = r.suggest_products_for(products)
+    else:
+        recommended_products = None
+    return render(request, 'cart/cart.html',
+                  {'recommended_products': recommended_products})

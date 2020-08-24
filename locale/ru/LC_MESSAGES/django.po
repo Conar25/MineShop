@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-23 19:40+0300\n"
+"POT-Creation-Date: 2020-08-24 10:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,11 +20,11 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: MineShop/settings.py:118
+#: MineShop/settings.py:119
 msgid "English"
 msgstr ""
 
-#: MineShop/settings.py:119
+#: MineShop/settings.py:120
 msgid "Russian"
 msgstr ""
 
@@ -1245,6 +1245,10 @@ msgstr ""
 #: venv/lib/python3.8/site-packages/kombu/transport/qpid.py:1324
 #, python-format
 msgid "Unable to connect to qpid with SASL mechanism %s"
+msgstr ""
+
+#: venv/lib/python3.8/site-packages/modeltranslation/widgets.py:25
+msgid "None"
 msgstr ""
 
 #: venv/lib/python3.8/site-packages/pylint_django/tests/input/func_noerror_gettext_lazy_format.py:7

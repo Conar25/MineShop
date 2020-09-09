@@ -24,7 +24,10 @@ urlpatterns = i18n_patterns(
     path('cart/', include('cart.urls', namespace='cart')),
     path('order/', include('order.urls', namespace='order')),
     path('', include('shop.urls', namespace='shop')),
- ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ )
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if 'rosetta' in settings.INSTALLED_APPS:
     urlpatterns += [

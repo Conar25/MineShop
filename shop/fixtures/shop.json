@@ -1,0 +1,241 @@
+[
+{
+  "model": "shop.category",
+  "pk": 1,
+  "fields": {
+    "name": "Blocks",
+    "name_en": "Blocks",
+    "name_ru": "Блоки",
+    "slug": "blocks"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 2,
+  "fields": {
+    "name": "Weapons",
+    "name_en": "Weapons",
+    "name_ru": "Вооружение",
+    "slug": "weapons"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 3,
+  "fields": {
+    "name": "Redstone",
+    "name_en": "Redstone",
+    "name_ru": "Рэдстоун",
+    "slug": "redstone"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "name": "Dirt",
+    "name_en": "Dirt",
+    "name_ru": "Земля",
+    "slug": "dirt",
+    "image": "uploads/2020/08/19/dirt.png",
+    "description": "Dirt is found at any altitude, and comprises the majority of the upper terrain layers in most overworld biomes, bridging the gap between stone and grass blocks in various thicknesses.\r\n\r\nThere are approximately 1,850 dirt blocks per chunk in plains, forest, snowy tundra, jungle, and mountains biomes. There can be as many as 3,000 in chunks with high mountains. Dirt also generates naturally in some houses in villages. Dirt also generates as part of the dirt floor found in the starting point area in mineshafts.\r\n\r\nDirt can generate in the Overworld in the form of mineral veins. Dirt attempts to generate 10 times per chunk in veins of size 1-33 at any level in all biomes.",
+    "description_en": "Dirt is found at any altitude, and comprises the majority of the upper terrain layers in most overworld biomes, bridging the gap between stone and grass blocks in various thicknesses.\r\n\r\nThere are approximately 1,850 dirt blocks per chunk in plains, forest, snowy tundra, jungle, and mountains biomes. There can be as many as 3,000 in chunks with high mountains. Dirt also generates naturally in some houses in villages. Dirt also generates as part of the dirt floor found in the starting point area in mineshafts.\r\n\r\nDirt can generate in the Overworld in the form of mineral veins. Dirt attempts to generate 10 times per chunk in veins of size 1-33 at any level in all biomes.",
+    "description_ru": "Грязь находится на любой высоте и включает в себя большинство верхних слоев ландшафта в большинстве биомов мира, перекрывая разрыв между каменными и травяными блоками различной толщины.\r\n\r\nВ равнинных, лесных, снежных тундрах, джунглях и горных биомах на каждый кусок приходится примерно 1850 блоков грязи. Кусков с высокими горами может быть до 3000. Грязь также образуется естественным образом в некоторых домах в деревнях. Грязь также образуется как часть грунтового пола в начальной точке шахт.\r\n\r\nГрязь может образовываться в Верхнем мире в виде минеральных жил. Грязь пытается генерировать 10 раз за кусок вены размером 1-33 на любом уровне во всех биомах.",
+    "brief": "Dirt is a block found abundantly in most biomes under a layer of grass blocks at the top of the Overworld.",
+    "brief_en": "Dirt is a block found abundantly in most biomes under a layer of grass blocks at the top of the Overworld.",
+    "brief_ru": "Грязь - это блок, который в изобилии можно найти в большинстве биомов под слоем блоков травы наверху Верхнего мира.",
+    "price": "1.99"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 2,
+  "fields": {
+    "category": 1,
+    "name": "Cobblestone",
+    "name_en": "Cobblestone",
+    "name_ru": "Булыжник",
+    "slug": "cobblestone",
+    "image": "uploads/2020/08/19/cobblestone.png",
+    "description": "When water and flowing lava come into contact, the flowing lava is replaced with cobblestone. However, if the lava flows on top of the water from above, stone is created instead. Non-flowing lava (a lava source block) turns into obsidian upon contact with water.",
+    "description_en": "When water and flowing lava come into contact, the flowing lava is replaced with cobblestone. However, if the lava flows on top of the water from above, stone is created instead. Non-flowing lava (a lava source block) turns into obsidian upon contact with water.",
+    "description_ru": "Когда вода и текущая лава соприкасаются, текущая лава заменяется булыжником. Однако, если лава льется на воду сверху, вместо нее создается камень. Нетекучая лава (блок источника лавы) превращается в обсидиан при контакте с водой.",
+    "brief": "Cobblestone requires a pickaxe to be mined, in which case it drops itself. If mined without a pickaxe, then the mining is slower and it drops nothing.",
+    "brief_en": "Cobblestone requires a pickaxe to be mined, in which case it drops itself. If mined without a pickaxe, then the mining is slower and it drops nothing.",
+    "brief_ru": "Для добычи булыжника требуется кирка, и в этом случае он падает сам. Если добывать без кирки, то добыча идет медленнее и ничего не падает.",
+    "price": "0.45"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 3,
+  "fields": {
+    "category": 1,
+    "name": "Netherack",
+    "name_en": "Netherack",
+    "name_ru": "Адский камень",
+    "slug": "netherack",
+    "image": "uploads/2020/08/19/netherrack.png",
+    "description": "When netherrack's top is lit on fire, the fire burns indefinitely.\r\n\r\nUsing bone meal on netherrack placed next to warped nylium or crimson nylium transforms the netherrack into more nylium.\r\n\r\nAnalyzing the netherrack in a material reducer, it turns out to be a volcanic silicate rock rich in mercury.‌",
+    "description_en": "When netherrack's top is lit on fire, the fire burns indefinitely.\r\n\r\nUsing bone meal on netherrack placed next to warped nylium or crimson nylium transforms the netherrack into more nylium.\r\n\r\nAnalyzing the netherrack in a material reducer, it turns out to be a volcanic silicate rock rich in mercury.‌",
+    "description_ru": "Когда верхняя часть Netherrack горит огнем, огонь горит бесконечно.\r\n\r\nИспользование костной муки на камне Пустоты, помещенном рядом с искривленным или малиновым нилием, превращает камень Пустоты в еще больше нилия.\r\n\r\nАнализируя адский камень в восстановителе материала, выясняется, что это вулканическая силикатная порода, богатая ртутью.",
+    "brief": "Netherrack can be mined only with a pickaxe.",
+    "brief_en": "Netherrack can be mined only with a pickaxe.",
+    "brief_ru": "Адский камень можно добыть только киркой.",
+    "price": "2.25"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "category": 2,
+    "name": "Iron Sword",
+    "name_en": "Iron Sword",
+    "name_ru": "Железный меч",
+    "slug": "iron-sword",
+    "image": "uploads/2020/08/19/iron_sword.png",
+    "description": "Pressing attack while holding a sword inflicts damage on both mobs and other players. Upon damaging a mob or player, the sword's durability decreases by 1.\r\n\r\nAttacking a boat or a minecart with a sword instantly destroys it, without decreasing the sword's durability.",
+    "description_en": "Pressing attack while holding a sword inflicts damage on both mobs and other players. Upon damaging a mob or player, the sword's durability decreases by 1.\r\n\r\nAttacking a boat or a minecart with a sword instantly destroys it, without decreasing the sword's durability.",
+    "description_ru": "Нажатие атаки с мечом в руках наносит урон как мобам, так и другим игрокам. При нанесении урона мобу или игроку прочность меча уменьшается на 1.\r\n\r\nАтака мечом на лодку или вагонетку мгновенно уничтожает их, не снижая прочности меча.",
+    "brief": "A sword is a melee weapon, that is mainly used to deal damage to mobs and/or players. Swords are also useful for mining cobwebs and bamboo.",
+    "brief_en": "A sword is a melee weapon, that is mainly used to deal damage to mobs and/or players. Swords are also useful for mining cobwebs and bamboo.",
+    "brief_ru": "Меч - это оружие ближнего боя, которое в основном используется для нанесения урона мобам и / или игрокам. Мечи также полезны для добычи паутины и бамбука.",
+    "price": "8.95"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 5,
+  "fields": {
+    "category": 2,
+    "name": "Axe",
+    "name_en": "Axe",
+    "name_ru": "Топор",
+    "slug": "axe",
+    "image": "uploads/2020/08/19/Stone_Axe_JE2_BE2.png",
+    "description": "An axe is used to break logs and blocks derived from wood faster than by using other tools. An axe uses 1 durability to break 1 block. For blocks that break instantly, it uses 0 durability.",
+    "description_en": "An axe is used to break logs and blocks derived from wood faster than by using other tools. An axe uses 1 durability to break 1 block. For blocks that break instantly, it uses 0 durability.",
+    "description_ru": "Топором быстрее ломают бревна и блоки, сделанные из дерева, чем с помощью других инструментов. Топор использует 1 прочность, чтобы сломать 1 блок. Для блоков, которые ломаются мгновенно, он использует 0 прочности.",
+    "brief": "An axe is a tool used to hasten the collection of wood-based items. It is also used as a weapon for melee attacks.",
+    "brief_en": "An axe is a tool used to hasten the collection of wood-based items. It is also used as a weapon for melee attacks.",
+    "brief_ru": "Топор - это инструмент, используемый для ускорения сбора деревянных предметов. Он также используется как оружие для рукопашных атак.",
+    "price": "10.99"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 6,
+  "fields": {
+    "category": 1,
+    "name": "Block of Gold",
+    "name_en": "Block of Gold",
+    "name_ru": "Блок золота",
+    "slug": "block-gold",
+    "image": "uploads/2020/08/19/Block_of_Gold_JE6_BE3_aZfNdit.png",
+    "description": "A block of gold is a precious metal block equivalent to nine gold ingots.\r\n\r\nOcean monuments have a central room containing 8 blocks of gold encased in dark prismarine.\r\n\r\nBlocks of gold generate as part of ruined portals and bastion remnants in varying quantities.",
+    "description_en": "A block of gold is a precious metal block equivalent to nine gold ingots.\r\n\r\nOcean monuments have a central room containing 8 blocks of gold encased in dark prismarine.\r\n\r\nBlocks of gold generate as part of ruined portals and bastion remnants in varying quantities.",
+    "description_ru": "Блок золота - это блок драгоценного металла, эквивалентный девяти золотым слиткам.\r\n\r\nУ памятников океана есть центральная комната, содержащая 8 блоков золота, заключенных в темный призмарин.\r\n\r\nБлоки золота генерируются как часть разрушенных порталов и остатков бастионов в разном количестве.",
+    "brief": null,
+    "brief_en": null,
+    "brief_ru": null,
+    "price": "100.50"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 7,
+  "fields": {
+    "category": 3,
+    "name": "Redstone Dust",
+    "name_en": "Redstone Dust",
+    "name_ru": "Красная пыль",
+    "slug": "redstone-dust",
+    "image": "uploads/2020/08/19/Active_Redstone_Wire_28NESW29_JE4.png",
+    "description": "Redstone dust is a mineral that can transmit redstone power when placed as a block. 15 lengths of redstone dust are naturally generated as part of the trap in each jungle pyramid. 5 lengths of redstone dust can be found in one type of jail cell room in a woodland mansion.",
+    "description_en": "Redstone dust is a mineral that can transmit redstone power when placed as a block. 15 lengths of redstone dust are naturally generated as part of the trap in each jungle pyramid. 5 lengths of redstone dust can be found in one type of jail cell room in a woodland mansion.",
+    "description_ru": "Пыль красного камня - это минерал, который может передавать энергию красного камня при размещении в виде блока. В каждой пирамиде джунглей естественным образом образуется 15 кусков пыли из красного камня, являющейся частью ловушки. В одном из тюремных камер лесного особняка можно найти 5 кусков пыли из красного камня.",
+    "brief": null,
+    "brief_en": null,
+    "brief_ru": null,
+    "price": "0.10"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 8,
+  "fields": {
+    "category": 3,
+    "name": "Piston",
+    "name_en": "Piston",
+    "name_ru": "Поршень",
+    "slug": "piston",
+    "image": "uploads/2020/08/19/150px-Piston_JE2.gif",
+    "description": "A piston is a block capable of pushing blocks, players, and mobs when given a redstone pulse. A piston can be broken using any tool with equal efficiency, and always drops itself. In Java Edition, it is faster to break them with a pickaxe. The pickaxe is the preferred tool for the head also, despite it being made almost completely of wood.",
+    "description_en": "A piston is a block capable of pushing blocks, players, and mobs when given a redstone pulse. A piston can be broken using any tool with equal efficiency, and always drops itself. In Java Edition, it is faster to break them with a pickaxe. The pickaxe is the preferred tool for the head also, despite it being made almost completely of wood.",
+    "description_ru": "Поршень - это блок, способный толкать блоки, игроков и мобов при наличии импульса красного камня. Поршень можно сломать любым инструментом с одинаковой эффективностью, и он всегда падает сам. В Java Edition их быстрее ломать киркой. Кирка также является предпочтительным инструментом для головы, несмотря на то, что она почти полностью сделана из дерева.",
+    "brief": null,
+    "brief_en": null,
+    "brief_ru": null,
+    "price": "5.00"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 9,
+  "fields": {
+    "category": 3,
+    "name": "Sticky Piston",
+    "name_en": "Sticky Piston",
+    "name_ru": "Липкий поршень",
+    "slug": "sticky-piston",
+    "image": "uploads/2020/08/19/150px-Sticky_Piston_JE2.gif",
+    "description": "A sticky piston has the same function as a piston but can also pull the block on its face back when it retracts, unlike the regular piston, which leaves the pushed block in place. A piston can be broken using any tool with equal efficiency, and always drops itself. In Java Edition, it is faster to break them with a pickaxe. The pickaxe is the preferred tool for the head also, despite it being made almost completely of wood.",
+    "description_en": "A sticky piston has the same function as a piston but can also pull the block on its face back when it retracts, unlike the regular piston, which leaves the pushed block in place. A piston can be broken using any tool with equal efficiency, and always drops itself. In Java Edition, it is faster to break them with a pickaxe. The pickaxe is the preferred tool for the head also, despite it being made almost completely of wood.",
+    "description_ru": "Липкий поршень выполняет ту же функцию, что и поршень, но также может тянуть блок лицевой стороной назад, когда он втягивается, в отличие от обычного поршня, который оставляет толкаемый блок на месте. Поршень можно сломать любым инструментом с одинаковой эффективностью, и он всегда падает сам. В Java Edition их быстрее ломать киркой. Кирка также является предпочтительным инструментом для головы, несмотря на то, что она почти полностью сделана из дерева.",
+    "brief": null,
+    "brief_en": null,
+    "brief_ru": null,
+    "price": "15.00"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 10,
+  "fields": {
+    "category": 1,
+    "name": "Mycelium",
+    "name_en": "Mycelium",
+    "name_ru": "Мицелий",
+    "slug": "mycelium",
+    "image": "uploads/2020/08/19/150px-Mycelium_JE2_BE2.png",
+    "description": "Mycelium is a variant of dirt that is found naturally in mushroom fields biomes. It has a particle effect that resembles tiny spores being released constantly from the surface. Mycelium can be obtained by mining it using a tool with the Silk Touch enchantment. If mined with any other tool or by hand, it drops dirt. A shovel is the fastest tool to collect it.",
+    "description_en": "Mycelium is a variant of dirt that is found naturally in mushroom fields biomes. It has a particle effect that resembles tiny spores being released constantly from the surface. Mycelium can be obtained by mining it using a tool with the Silk Touch enchantment. If mined with any other tool or by hand, it drops dirt. A shovel is the fastest tool to collect it.",
+    "description_ru": "Мицелий - это разновидность грязи, которая естественным образом встречается в биомах грибных полей. Он обладает эффектом частиц, который напоминает крошечные споры, постоянно выделяющиеся с поверхности. Мицелий можно получить, добывая его с помощью инструмента с зачарованием Шелковое прикосновение. При добыче любым другим инструментом или вручную с него падает грязь. Лопата - самый быстрый инструмент для ее сбора.",
+    "brief": null,
+    "brief_en": null,
+    "brief_ru": null,
+    "price": "4.25"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 11,
+  "fields": {
+    "category": 1,
+    "name": "Block of Diamond",
+    "name_en": "Block of Diamond",
+    "name_ru": "Алмазный блок",
+    "slug": "block-diamond",
+    "image": "uploads/2020/08/19/150px-Block_of_Diamond_JE6_BE3.png",
+    "description": "A block of diamond is a precious mineral block. Blocks of diamond can be mined with an iron pickaxe or better. Blocks of diamond can be used to \"power\" a beacon. The beacon can be powered by a 3×3 square of diamond blocks underneath it, and can optionally also include a 5×5, 7×7 and 9×9 layer in the shape of a pyramid under the original layer to increase the effects from the beacon. The layers do not have to be entirely diamond blocks, as they may also contain blocks of iron, blocks of gold, blocks of netherite, and blocks of emerald.",
+    "description_en": "A block of diamond is a precious mineral block. Blocks of diamond can be mined with an iron pickaxe or better. Blocks of diamond can be used to \"power\" a beacon. The beacon can be powered by a 3×3 square of diamond blocks underneath it, and can optionally also include a 5×5, 7×7 and 9×9 layer in the shape of a pyramid under the original layer to increase the effects from the beacon. The layers do not have to be entirely diamond blocks, as they may also contain blocks of iron, blocks of gold, blocks of netherite, and blocks of emerald.",
+    "description_ru": "Блок алмаза - драгоценный минеральный блок. Блоки алмаза можно добывать железной киркой или лучше. Блоки алмаза могут быть использованы для «питания» маяка. Маяк может питаться от квадрата 3 × 3 из алмазных блоков под ним, а также может дополнительно включать слой 5 × 5, 7 × 7 и 9 × 9 в форме пирамиды под исходным слоем для усиления эффектов от маяк. Слои не обязательно должны быть полностью алмазными блоками, так как они также могут содержать блоки железа, блоки золота, блоки нетерита и блоки изумруда.",
+    "brief": null,
+    "brief_en": null,
+    "brief_ru": null,
+    "price": "199.99"
+  }
+}
+]

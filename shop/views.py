@@ -51,7 +51,6 @@ def detail_view(request, slug, pk):
 
     r = Recommender()
     recommended_products = r.suggest_products_for([product], 4)
-    recommended_products = None
 
     return render(request, 'shop/detail.html',
                   {'product': product,

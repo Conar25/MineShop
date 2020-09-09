@@ -17,11 +17,11 @@ def send_order_created_email(pk, email, payment_url):
               f'on the following link: {payment_url}'
     from_email = "MineShop@gmail.com"
 
-    mail_sent = send_mail(subject,
+    email = EmailMessage(subject,
                           message,
                           from_email,
                           (email,))
-    return mail_sent
+    return email.send()
 
 
 @task

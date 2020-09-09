@@ -10,9 +10,11 @@ from .recommender import Recommender
 from .utils import is_ajax
 
 
-r = redis.Redis(host=settings.REDIS_HOST,
-                port=settings.REDIS_PORT,
-                db=settings.REDIS_DB)
+# r = redis.Redis(host=settings.REDIS_HOST,
+#                 port=settings.REDIS_PORT,
+#                 db=settings.REDIS_DB)
+
+r = redis.from_url(settings.REDIS_URL)
 
 
 def list_view(request, slug=None):

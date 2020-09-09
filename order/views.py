@@ -16,9 +16,10 @@ from .tasks import send_order_created_email, send_order_paid_email
 from .utils import write_invoice_pdf
 
 
-r = redis.Redis(host=settings.REDIS_HOST,
-                port=settings.REDIS_PORT,
-                db=settings.REDIS_DB)
+# r = redis.Redis(host=settings.REDIS_HOST,
+#                 port=settings.REDIS_PORT,
+#                 db=settings.REDIS_DB)
+r = redis.from_url(settings.REDIS_URL)
 
 
 def payment_view(request, pk):

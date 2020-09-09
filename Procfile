@@ -1,2 +1,2 @@
 web: gunicorn MineShop.wsgi --log-file -
-worker: celery -A MineShop worker
+worker: celery -A MineShop worker -l info

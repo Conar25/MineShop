@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-24 10:05+0300\n"
+"PO-Revision-Date: 2020-08-23 16:25+0000\n"
+"Last-Translator: b'  <>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.4\n"
+
+#: cart/templates/cart/cart.html:5
+msgid "Cart"
+msgstr ""
+
+#: cart/templates/cart/cart.html:10
+msgid "Your shopping cart"
+msgstr ""
+
+#: cart/templates/cart/cart.html:15
+msgid "Product"
+msgstr ""
+
+#: cart/templates/cart/cart.html:16
+msgid "Quantity"
+msgstr ""
+
+#: cart/templates/cart/cart.html:17
+msgid "Remove"
+msgstr ""
+
+#: cart/templates/cart/cart.html:18
+msgid "Unit price"
+msgstr ""
+
+#: cart/templates/cart/cart.html:19
+msgid "Price"
+msgstr ""
+
+#: cart/templates/cart/cart.html:37
+msgid "update"
+msgstr ""
+
+#: cart/templates/cart/cart.html:43
+msgid "remove"
+msgstr ""
+
+#: cart/templates/cart/cart.html:47 cart/templates/cart/cart.html:50
+#: cart/templates/cart/cart.html:56
+msgid "rub"
+msgstr ""
+
+#: cart/templates/cart/cart.html:55
+msgid "Total"
+msgstr ""
+
+#: cart/templates/cart/cart.html:61
+msgid "continue shopping"
+msgstr ""
+
+#: cart/templates/cart/cart.html:62
+msgid "checkout"
+msgstr ""
+
+#: cart/templates/cart/cart.html:67
+msgid "You can be interested in"
+msgstr ""

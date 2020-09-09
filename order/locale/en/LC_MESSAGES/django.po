@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-24 10:05+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: order/forms.py:10 order/models.py:13
+msgid "Postal Code"
+msgstr ""
+
+#: order/models.py:8
+msgid "First Name"
+msgstr ""
+
+#: order/models.py:9
+msgid "Last Name"
+msgstr ""
+
+#: order/models.py:10
+msgid "Email"
+msgstr ""
+
+#: order/models.py:11
+msgid "City"
+msgstr ""
+
+#: order/models.py:12
+msgid "Address"
+msgstr ""
+
+#: order/templates/order/order.html:4
+msgid "Order"
+msgstr ""
+
+#: order/templates/order/order.html:9
+msgid "Checkout"
+msgstr ""
+
+#: order/templates/order/order.html:16
+msgid "submit"
+msgstr ""
+
+#: order/templates/order/order.html:22
+msgid "Your order"
+msgstr ""
+
+#: order/templates/order/order.html:25 order/templates/order/order.html:29
+msgid "rub"
+msgstr ""
+
+#: order/templates/order/order.html:29
+msgid "Total"
+msgstr ""
+
+#: order/templates/order/payment.html:5 order/templates/order/payment.html:10
+msgid "Payment"
+msgstr ""
+
+#: order/templates/order/payment.html:14
+msgid "This order has already been paid"
+msgstr ""
